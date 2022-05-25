@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use CustomLog;
+use App\Log\Facade\CustomLogFacade;
 
 class DemoController extends Controller
 {
@@ -14,7 +14,7 @@ class DemoController extends Controller
 //            CustomLog::logError($a);
 //            CustomLog::logWarning($a);
 //            CustomLog::logApi($a);
-            CustomLog::logBatch($a);
+            CustomLogFacade::logBatch($a);
         }
     }
 

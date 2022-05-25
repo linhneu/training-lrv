@@ -5,11 +5,6 @@ use Illuminate\Support\Facades\Log;
 
 class CustomLog
 {
-    public function helloWorld()
-    {
-        echo "Hello World";
-    }
-
     public function LogInfo($message)
     {
         return Log::channel('info_log')->info($message);
@@ -35,6 +30,4 @@ class CustomLog
     {
         return Log::channel('batch_log')->info($message);
     }
-
-
 }
